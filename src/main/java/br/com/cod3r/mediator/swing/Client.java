@@ -1,5 +1,6 @@
 package br.com.cod3r.mediator.swing;
 
+import br.com.cod3r.mediator.swing.mediator.Mediator;
 import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
@@ -15,12 +16,17 @@ public class Client {
 	private ResetButton reset;
 	private Label label;
 	private State state;
+	private Mediator mediator;
 	
 	public Client() {
-		state = new State();
-		label = new Label(state);
-		button = new AddButton(state, label);
-		reset = new ResetButton(state, label, button);
+		mediator = new Mediator();
+		state = new State(mediator);
+		label = new Label(mediator);
+		button = new AddButton(mediator);
+		reset = new ResetButton(mediator);
+		mediator.setButton(button);
+		mediator.setLabel(label);
+		mediator.setState(state);
 	}
 
 	public void run() {
