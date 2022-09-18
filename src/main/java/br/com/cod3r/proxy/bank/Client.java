@@ -1,5 +1,6 @@
 package br.com.cod3r.proxy.bank;
 
+import br.com.cod3r.proxy.bank.services.ATM;
 import br.com.cod3r.proxy.bank.services.Bank;
 import br.com.cod3r.proxy.bank.services.BankOperations;
 
@@ -14,8 +15,11 @@ public class Client {
 		bank.changePassword(123L, "1111", "4321");
 		bank.changePassword(123L, "1234", "4321");
 		bank.withdraw(123L, "4321", 700L);
-		
+
 		System.out.println("------------- ATM -------------");
-		
+
+		final ATM atm = new ATM(bank);
+		atm.deposit(456L, 20000L);
+		atm.withdraw(456L, "9999", 10L);
 	}
 }
