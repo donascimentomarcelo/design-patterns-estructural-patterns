@@ -34,6 +34,19 @@ nesse caso, é `HDMI`.
 #
 ### Bridge
 
+Desacoplar uma abstração de sua implementação para que os dois possam variar independentemente.
+
+* Possuir classe abstrata `Employee`
+* Os objetos concretos `ITGuy` e `ProjectManager` devem estender essa classe
+* Possuir interface `Converter` que deve ser implementada pelas classes `CSVConverter` e `JsonConverter`
+* Uso:
+    * Instanciar a classe do tipo converter que deseja utilizar
+    * Ter uma instancia de `ITGuy` e `ProjectManager`
+    * Passar objeto como parâmetro no `getEmployeeFormated` que vem do converter
+* Com isso, evitamos de criar `ITGuyJson`, `ProjectManagerJson`, `ITGuyCsv` e `ProjectManagerCsv`, fazendo com que a 
+aplicação possua um grande número de classes concretas.
+
+![Alt text](imgs/bridge.jpg "Bridge")
 #
 ### Composite
 
