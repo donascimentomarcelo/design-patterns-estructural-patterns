@@ -19,7 +19,7 @@ public class Client {
 		final Computer pc1 = new Computer();
 		final OldMonitor oldMonitor = new OldMonitor();
 		pc1.connectPort(new HDMIToVGAAdapter(oldMonitor));
-		pc1.sendImageAndSound("image...", "sound...");
+		pc1.sendImageAndSound(">>> VGA image", "sound...");
 
 
 		System.out.println("------ Monitor Class Adapter ----------");
