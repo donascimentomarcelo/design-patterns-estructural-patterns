@@ -50,6 +50,16 @@ aplicação possua um grande número de classes concretas.
 #
 ### Composite
 
+Compor objetos em estruturas de árvore para representar hierarquias todo-parte. Composite permite que clientes tratem 
+objetos individuais e composições de objetos de maneira uniforme.
+
+* Possuir uma interface `FileSystemItem`, que pode ser um nó ou uma folha (uma pasta ou um arquivo)
+* Possuir uma classe concreta chamada `CompositeFolder`, que implementa `FileSystemItem`
+    * A `CompositeFolder` deve ter uma lista de `FileSystemItem`, que podem ser tanto pastas como arquivos 
+    (Onde ocorre o composite)
+    
+
+![Alt text](imgs/composite.jpg "Composite")
 #
 ### Decorator
 
