@@ -63,6 +63,23 @@ objetos individuais e composições de objetos de maneira uniforme.
 #
 ### Decorator
 
+Anexar responsabilidades adicionais a um objeto dinamicamente. Decorators oferecem uma alternativa flexível ao uso de 
+herança para estender uma funcionalidade.
+
+* Possuir uma interface `Drink`, onde essa interface sera implementada tanto pelos objetos concretos quanto pelos 
+decorators
+* As classes `Expresso` e `Tea` devem implementar `Drink`
+* O Decorator `DrinkDecorator` deve ser uma classe abstrata e deve implementar `Drink`
+* As classes `Milk` e `DoubleDrink` devem implementar `DrinkDecorator`
+* Uso:
+    * Sem decorar o objeto `new Expresso()`
+    * Decorando o objeto `new DoubleDrink(new Expresso())` ou `new Milk(new DoubleDrink(new DoubleDrink(new Expresso())))`
+* Basicamente, eu instancio os objetos concretos, dentro dos objetos que estendem do decorator, e os objetos concretos
+serão decorados. Com isso, os objetos concretão passar a ter as novas resposabilidades sendo adicionadas de acordo com 
+o decorator que eu utilizar.
+
+
+![Alt text](imgs/decorator.jpg "Decorator")
 #
 ### Facade
 
