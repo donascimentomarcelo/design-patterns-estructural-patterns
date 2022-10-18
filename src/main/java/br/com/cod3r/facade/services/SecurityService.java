@@ -1,9 +1,8 @@
-package br.com.cod3r.facade.callCenter.services;
+package br.com.cod3r.facade.services;
 
+import br.com.cod3r.facade.model.Card;
+import br.com.cod3r.facade.model.Register;
 import java.util.List;
-
-import br.com.cod3r.facade.callCenter.model.Card;
-import br.com.cod3r.facade.callCenter.model.Register;
 
 public class SecurityService {
 	private CardService cardService;

@@ -1,9 +1,9 @@
-package br.com.cod3r.facade.callCenter.services;
+package br.com.cod3r.facade.services;
 
+import br.com.cod3r.facade.model.Register;
 import java.util.List;
 
-import br.com.cod3r.facade.callCenter.model.Card;
-import br.com.cod3r.facade.callCenter.model.Register;
+import br.com.cod3r.facade.model.Card;
 
 public class ReportService {
 	private RegisterService registerService;

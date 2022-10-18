@@ -1,8 +1,8 @@
-package br.com.cod3r.facade.callCenter;
+package br.com.cod3r.facade;
 
-import br.com.cod3r.facade.callCenter.facade.CallCenterFacade;
+import br.com.cod3r.facade.facade.CallCenterFacade;
 
-import br.com.cod3r.facade.callCenter.model.Card;
+import br.com.cod3r.facade.model.Card;
 
 public class Client {
 

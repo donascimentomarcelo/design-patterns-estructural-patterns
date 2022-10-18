@@ -1,4 +1,4 @@
-package br.com.cod3r.facade.callCenter.model;
+package br.com.cod3r.facade.model;
 
 public class Card {
 	private Long userNumber;
