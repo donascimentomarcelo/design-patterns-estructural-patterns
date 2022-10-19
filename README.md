@@ -1,4 +1,4 @@
-#  Design Patterns Estructural
+#  Design Patterns Structural
 
 * Adapter
 * Bridge
@@ -83,6 +83,18 @@ o decorator que eu utilizar.
 #
 ### Facade
 
+Oferecer uma interface única para um conjunto de interfaces de um subsistema. Façade define uma interface de nível mais 
+elevado que torna o subsistema mais fácil de usar.
+
+* Dado que nós tenhamos uma série de serviços em uma aplicação
+* Possuir uma classe `CallCenterFacade` onde deve conter todos os servicos instanciados, e os médotos principais que 
+desejas que o facade os chame, como por ex: `getSumary`, `getPaymentInfoByCard`, e etc.
+* O construtor do `CallCenterFacade` deve instanciar todos os objetos, mas não via injeção de dependência.
+* Uso:
+    * Instanciar facade `new CallCenterFacade()`
+    * Chamar métodos desejados `facade.getCardByUser(123456L);`
+
+![Alt text](imgs/facade.jpg "Facade")
 #
 ### Flyweight
 
