@@ -98,6 +98,15 @@ desejas que o facade os chame, como por ex: `getSumary`, `getPaymentInfoByCard`,
 #
 ### Flyweight
 
+Usar compartilhamento para suportar grandes quantidades de objetos refinados eficientemente.
+
+* Dado que eu tenho um objeto chamado `Music`, com as propriedades `name`, `artist`, `durationInSeconds` e `playerQty`
+* As propriedades `name`, `artist` e `durationInSeconds` são extrínsecos, e serão extraídas para o objeto `MusicFlyweight`,
+e esse objeto sera adicionado dentro do objeto `Music`
+* A propriedade `playerQty` é intríseca, e deve ficar dentro do objeto `Music`
+
+
+![Alt text](imgs/flyweight.jpg "Flyweight")
 #
 ### Mediator 
 
