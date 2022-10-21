@@ -110,5 +110,20 @@ e esse objeto sera adicionado dentro do objeto `Music`
 #
 ### Mediator 
 
+Definir um objeto que encapsula como um conjunto de objetos interagem. Mediator promove acoplamento fraco ao manter 
+objetos que não se referem um ao outro explicitamente, permitindo variar sua interação independentemente.
+
+* Possuir classe abstrata para atuar como mediator, chamada `Mediator`
+* Possuir classe concreta chamada `TranslatorMediator`, que estende de `Mediator`
+* Possuir classe abstrata chamada `User`, que deve conter uma propriedade do tipo `Mediator`
+* As classes `PortugueseUser` e `EnglishUser`, devem ser concretas, e extender da classe `User`
+* Uso:
+    * Instanciar `TranslatorMediator`
+    * Ter algumas instâncias das classes `PortugueseUser` e `EnglishUser`
+    * Os métodos que desejarem ser chamados, devem ser chamados a partir da instancia do `TranslatorMediator` ou dos
+    objetos concretos. Com isso, métodos como `addUser` e `sendMessage` passarão a ser chamados através do mediator.
+* Com isso a comunicação entre os objetos passam a ser através do mediator.
+
+![Alt text](imgs/mediator.jpg "Mediator")
 #
 ### Proxy
