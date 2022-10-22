@@ -127,3 +127,13 @@ objetos que não se referem um ao outro explicitamente, permitindo variar sua in
 ![Alt text](imgs/mediator.jpg "Mediator")
 #
 ### Proxy
+
+Prover um substituto ou ponto através do qual um objeto possa controlar o acesso a outro.
+
+* Possuir interface `BankOperations` que deve ser implementada pelas classes `ATM` e `Bank`
+* O construtor de `ATM` deve receber um parâmetro do tipo `Bank`e é atribuido a uma propriedade do tipo `BankOperations`
+* Com isso posso chamar os métodos de `Bank` dentro do `ATM`
+    * Está `bank.deposit(account, amount);` delegando ao metodo `deposit` que esta em `Bank`
+    * Está `bank.withdraw(account, passwd, amount);` delegando ao metodo `withdraw` que esta em `Bank`
+
+![Alt text](imgs/proxy.jpg "Proxy")
